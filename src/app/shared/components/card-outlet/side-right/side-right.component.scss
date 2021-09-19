@@ -1,0 +1,64 @@
+.container-side-right {
+    position: relative;
+    width: 100%;
+
+    .container-tabs {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        border-bottom: solid 1px #DADADA;
+
+        .button-tab {
+            position: relative;
+            background: none;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            min-height: 40px;
+            font-family: 'Montserrat';
+            font-size: 10px;
+            line-height: 10px;
+            font-weight: 600;
+            padding-right: 6px !important;
+            padding-left: 6px !important;
+        }
+
+        .button-tab.selected {
+            color: #ffcb29;
+        }
+
+        .button-tab.selected::after {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            content: '';
+            width: calc(100% - 12px);
+            height: 3px;
+            background-color: skyblue;
+            border-radius: 50px 50px 0px 0px !important;
+        }
+    }
+
+}
+
+.box-centered {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    vertical-align: middle;
+    margin-bottom: 16px;
+
+    p {
+        margin: 0px !important;
+        margin-left: 16px !important;
+    }
+}
+
+.p-detail-options {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 600;
+}

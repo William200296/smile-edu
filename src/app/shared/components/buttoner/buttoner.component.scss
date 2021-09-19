@@ -1,0 +1,40 @@
+.container-buttoner {
+    margin-top: -46px !important;
+    margin-right: -12px !important;
+
+    .opener-buttons-top button {
+        background-color: skyblue !important;
+        background: skyblue !important;
+        color: #FFFFFF !important;
+
+        mat-icon {
+            color: #FFFFFF !important;
+        }
+    }
+
+    .opener-buttons-top,
+    .opener-buttons {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+    }
+
+    .opener-buttons {
+
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        transition: 0.8s;
+
+        button {
+            margin-bottom: 12px;
+        }
+    }
+
+    .opener-buttons.open {
+        height: 300px;
+    }
+}

@@ -1,0 +1,47 @@
+.accordion-line {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: solid 1px #DADADA;
+
+    .accordion-line-title {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 16px;
+        cursor: pointer;
+
+        h4 {
+            margin-bottom: 0px !important;
+            font-family: 'Montserrat';
+            font-size: 12px;
+            line-height: 12px;
+            font-weight: 600;
+        }
+    }
+
+    .accordion-line-body {
+        position: relative;
+        padding: 0px;
+        height: 0px;
+        overflow: hidden;
+        transition: 0.5s;
+
+        p {
+            margin: 0px !important;
+            text-align: justify !important;
+            font-family: 'Montserrat';
+            font-size: 10px;
+            line-height: 10px;
+            font-weight: 600;
+        }
+    }
+
+    .opened {
+        padding: 16px;
+        height: auto;
+    }
+}

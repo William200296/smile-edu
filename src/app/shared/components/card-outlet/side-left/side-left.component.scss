@@ -1,0 +1,101 @@
+.container-side-left {
+    position: relative;
+    width: auto;
+
+    h3 {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 8px !important;
+        margin-top: 24px !important;
+    }
+
+    table.student-detail {
+        width: 100%;
+
+        td {
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 12px;
+            padding-bottom: 6px;
+        }
+
+        td+td {
+            text-align: right;
+        }
+    }
+
+    .badge-link-secondary,
+    .badge-link-primary {
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 2px 8px;
+        border: solid 2px #009b15;
+        border-radius: 50px;
+        color: #009b15;
+    }
+
+    .badge-link-primary {
+        border: solid 2px #ffcb29;
+        color: #ffcb29;
+        padding: 6px 12px;
+    }
+
+    .container-mat {
+        position: relative;
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+        margin-bottom: 16px;
+
+        p {
+            margin: 0px !important;
+            margin-left: 16px !important;
+        }
+    }
+
+    .detail-room {
+
+        h4,
+        p {
+            margin: 0px !important;
+            font-family: 'Montserrat';
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        h4 {
+            margin-bottom: 8px !important;
+        }
+    }
+
+    .td-padding-badge {
+        padding-top: 8px;
+        padding-left: 4px;
+
+        a,
+        a .badge-link-primary {
+            text-decoration: none !important;
+        }
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .container-brothers {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        vertical-align: middle;
+
+        button {
+            margin-left: 16px;
+        }
+    }
+}

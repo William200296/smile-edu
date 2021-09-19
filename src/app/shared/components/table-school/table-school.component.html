@@ -1,0 +1,72 @@
+<div class="table-school-container-dialog">
+    <h3>Histórico de aulas</h3>
+    <div class="avatar-container">
+        <img src="assets/img/avatar-student.jpg" alt="">
+        <p>Elio Gonzales Perez</p>
+    </div>
+    <div class="cotainer-table-school">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!-- Year Column -->
+            <ng-container matColumnDef="year">
+                <th mat-header-cell *matHeaderCellDef> Año </th>
+                <td mat-cell *matCellDef="let element">
+                    {{ element.year }}
+                </td>
+            </ng-container>
+
+            <!-- Place Column -->
+            <ng-container matColumnDef="place">
+                <th mat-header-cell *matHeaderCellDef> Sede </th>
+                <td mat-cell *matCellDef="let element">
+                    {{ element.place }}
+                </td>
+            </ng-container>
+
+            <!-- Program Column -->
+            <ng-container matColumnDef="program">
+                <th mat-header-cell *matHeaderCellDef> Programa </th>
+                <td mat-cell *matCellDef="let element">
+                    {{ element.program }}
+                </td>
+            </ng-container>
+
+            <!-- Grade Column -->
+            <ng-container matColumnDef="grade">
+                <th mat-header-cell *matHeaderCellDef> Grado </th>
+                <td mat-cell *matCellDef="let element">
+                    {{ element.grade }}
+                </td>
+            </ng-container>
+
+            <!-- ClassRoom Column -->
+            <ng-container matColumnDef="classRoom">
+                <th mat-header-cell *matHeaderCellDef> Aula / Sección </th>
+                <td mat-cell *matCellDef="let element">
+                    {{ element.classRoom }}
+                </td>
+            </ng-container>
+
+            <!-- Scholarship Column -->
+            <ng-container matColumnDef="scholarship">
+                <th mat-header-cell *matHeaderCellDef> Beca </th>
+                <td mat-cell *matCellDef="let element">
+                    {{ element.scholarship }}
+                </td>
+            </ng-container>
+
+            <!-- Status Column -->
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef> Estado </th>
+                <td mat-cell *matCellDef="let element">
+                    {{ element.status ? 'ACTIVO' : 'INACTIVO' }}
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 7, 10]" showFirstLastButtons aria-label="Select page">
+        </mat-paginator>
+    </div>
+</div>

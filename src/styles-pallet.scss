@@ -1,0 +1,93 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+$smiledu-primary: (50: #fff8e1,
+  100: #ffecb3,
+  200: #ffe183,
+  300: #ffd650,
+  400: #ffcb29,
+  500: #ffcb29,
+  600: #ffb402,
+  700: #ffa101,
+  800: #ff9100,
+  900: #ff7100,
+  A100: #FFFDE7,
+  A200: #FFF9C4,
+  A400: #FFF59D,
+  A700: #FEF175,
+  contrast: (50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$smiledu-accent: (50: #e3f7e7,
+  100: #bdecc4,
+  200: #8fdf9e,
+  300: #57d374,
+  400: #00c853,
+  500: #00bd2f,
+  600: #00ad24,
+  700: #009b15,
+  800: #008a00,
+  900: #006a00,
+  A100: #ccb3ff,
+  A200: #a980ff,
+  A400: #874dff,
+  A700: #7534ff,
+  contrast: (50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+$smiledu-app-primary: mat-palette($smiledu-primary);
+$smiledu-app-accent: mat-palette($smiledu-accent);
+//$smiledu-app-accent:  mat-palette('#575756');
+
+//$smiledu-app-primary: mat-palette($mat-indigo);
+//$smiledu-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$smiledu-app-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$smiledu-app-theme: mat-light-theme($smiledu-app-primary,
+  $smiledu-app-accent,
+  $smiledu-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($smiledu-app-theme);
+
+$primary: mat-color($smiledu-app-primary);
+$primary-dark: mat-color($smiledu-app-primary, 900);
+
+$accent: mat-color($smiledu-app-accent);
+$accent-dark: mat-color($smiledu-app-accent, 900);
+
+$warn: mat-color($smiledu-app-warn);
+$warn-dark: mat-color($smiledu-app-warn, 900);

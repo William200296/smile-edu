@@ -1,0 +1,23 @@
+<div class="container-year-detail" #container>
+
+    <button mat-icon-button  (click)="openBox()">
+        <mat-icon *ngIf="isOpen">keyboard_arrow_up</mat-icon>
+        <mat-icon *ngIf="!isOpen">keyboard_arrow_down</mat-icon>
+    </button>
+
+    <h4 (click)="openBox()">{{ detailYear.yearName }}</h4>
+
+    <table>
+        <tbody>
+            <tr *ngFor="let item of detailYear.yearList">
+                <td>{{ item.name }}</td>
+                <td>
+                    <a href="javascript:void(0);">
+                        {{ item.progress }}
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

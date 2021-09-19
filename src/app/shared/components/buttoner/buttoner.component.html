@@ -1,0 +1,26 @@
+<div class="container-buttoner">
+    <div class="opener-buttons-top">
+        <button mat-fab (click)="openButtoner()" color="default">
+            <mat-icon *ngIf="!isOpen">add</mat-icon>
+            <mat-icon *ngIf="isOpen">close</mat-icon>
+        </button>
+    </div>
+
+    <div class="opener-buttons" #opener>
+        <button mat-mini-fab color="default">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-mini-fab color="default">
+            <mat-icon>compare_arrows</mat-icon>
+        </button>
+        <button mat-mini-fab color="default">
+            <mat-icon>unfold_more</mat-icon>
+        </button>
+        <button mat-mini-fab color="default">
+            <mat-icon>arrow_upward</mat-icon>
+        </button>
+        <button mat-mini-fab color="default">
+            <mat-icon>arrow_downward</mat-icon>
+        </button>
+    </div>
+</div>

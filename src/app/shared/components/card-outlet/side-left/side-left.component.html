@@ -1,0 +1,93 @@
+<div class="container-side-left">
+    <app-student-selected></app-student-selected>
+
+    <h3>Detalles del Estudiante</h3>
+
+    <table class="student-detail">
+        <tbody>
+            <tr>
+                <td>Nro. Documento</td>
+                <td>2423423</td>
+            </tr>
+            <tr>
+                <td>Sede</td>
+                <td>PREMIUM COLLEGE - SURCO</td>
+            </tr>
+            <tr>
+                <td>Grado</td>
+                <td>1° Primaria</td>
+            </tr>
+            <tr>
+                <td>Estado de pago</td>
+                <td>
+                    <span class="badge-link-secondary">
+                        Al día
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Matricular</h3>
+
+    <div class="container-mat">
+        <button mat-mini-fab color="default">
+            <mat-icon>library_add</mat-icon>
+        </button>
+        <p>Matricular en aula</p>
+    </div>
+
+    <div class="container-rooms">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="detail-room">
+                        <h4>LOS LEÑADORES</h4>
+                        <p>Año lectivo</p>
+                    </td>
+                    <td>
+                        <button mat-icon-button color="default">
+                            <mat-icon>
+                                compare_arrows
+                            </mat-icon>
+                        </button>
+                    </td>
+                    <td>
+                        <button mat-icon-button color="default">
+                            <mat-icon>
+                                delete
+                            </mat-icon>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="td-padding-badge">
+                        <a href="javascript:void(0);" (click)="openHistoricClassRoom()">
+                            <span class="badge-link-primary">
+                                Histórico de aulas
+                            </span>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Hermanos (as)</h3>
+
+    <div class="container-brothers">
+        <app-image-avatar></app-image-avatar>
+        <app-image-avatar></app-image-avatar>
+        <button mat-mini-fab color="default">
+            <mat-icon>person_add</mat-icon>
+        </button>
+    </div>
+
+    <h3>Familiares</h3>
+
+    <div class="d-flex">
+        <app-image-avatar></app-image-avatar>
+        <app-image-avatar></app-image-avatar>
+        <app-image-avatar></app-image-avatar>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="accordion-line">
+    <div class="accordion-line-title" (click)="openAccordion()">
+        <h4>{{ titleAccordion }}</h4>
+        <button mat-icon-button color="default">
+            <mat-icon *ngIf="isOpen">keyboard_arrow_up</mat-icon>
+            <mat-icon *ngIf="!isOpen">keyboard_arrow_down</mat-icon>
+        </button>
+    </div>
+    <div class="accordion-line-body" #contentAccordion>
+        <ng-content></ng-content>
+    </div>
+</div>

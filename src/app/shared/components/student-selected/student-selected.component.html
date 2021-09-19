@@ -1,0 +1,44 @@
+<div class="container-session">
+    <div class="container-img">
+        <img src="assets/img/avatar-student.jpg" alt="">
+    </div>
+    <div class="container-details">
+        <p>Elio</p>
+        <h4>Gonzáles Perez</h4>
+    </div>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <mat-icon>group_add</mat-icon>
+            <span>Unir familia</span>
+        </button>
+        <button mat-menu-item disabled>
+            <mat-icon>person_outline</mat-icon>
+            <span>Activar estudiante</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>person</mat-icon>
+            <span>Desactivar estudiante</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>group_add</mat-icon>
+            <span>Declaración del padre</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>school</mat-icon>
+            <span>Trasladar estudiante</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>school</mat-icon>
+            <span>Solicitud de act. de datos</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon>school</mat-icon>
+            <span>Ficha de datos</span>
+        </button>
+    </mat-menu>
+
+</div>

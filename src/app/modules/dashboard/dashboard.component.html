@@ -1,0 +1,96 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="0">
+
+        <mat-sidenav class="mat-sidenav-add-custom-class" #snav [mode]="'side'" [fixedInViewport]="mobileQuery.matches"
+            fixedTopGap="0">
+            <mat-nav-list>
+
+                <a class="list-item-ref menu-item" mat-list-item (click)="showMenu($event)">
+                    <mat-icon>menu</mat-icon>
+                    <p class="nav-list-item p-logo">
+                        <img class="image-logo" src="assets/img/logo.png" alt="">
+                        smil<b>edu</b>
+                    </p>
+                </a>
+
+                <a class="list-item-ref login-item" mat-list-item>
+                    <app-user-login style="width: 100%;"></app-user-login>
+                </a>
+
+                <a class="list-item-ref" [ngClass]="{ 'bordered-bottom-item': nav.hasLine }" mat-list-item *ngFor="let nav of fillerNav">
+                    <mat-icon>{{ nav.iconName }}</mat-icon>
+                    <p class="nav-list-item">{{ nav.listDetail }}</p>
+                </a>
+
+            </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content class="margin-container-left-opened">
+
+            <mat-toolbar color="primary">
+
+                <mat-toolbar-row>
+
+                    <span class="color-default principal-title">Matrícula | Estudiantes</span>
+
+                    <span class="spacer"></span>
+
+                    <button mat-icon-button>
+                        <mat-icon>notifications_active</mat-icon>
+                    </button>
+
+                    <button mat-icon-button>
+                        <mat-icon>chat_bubble_outline</mat-icon>
+                    </button>
+
+                    <button mat-icon-button>
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+
+                    <button mat-icon-button>
+                        <mat-icon>share</mat-icon>
+                    </button>
+
+                </mat-toolbar-row>
+
+                <mat-toolbar-row>
+
+                </mat-toolbar-row>
+
+            </mat-toolbar>
+
+            <button #menu class="d-none" (click)="snav.toggle()">SidenavHelper</button>
+
+            <div class="dinamic-router-outlet">
+
+                <div class="side-left">
+                    
+                    <app-search-dinamic></app-search-dinamic>
+
+                    <app-select-dinamic></app-select-dinamic>
+        
+                    <div class="container-year-detail">
+                        <app-year-detail *ngFor="let item of year" [year]="item"></app-year-detail>
+                    </div>
+
+                </div>
+
+                <div class="side-center">
+                    <app-card-outlet></app-card-outlet>
+                    <div class="legend">
+                        <p>Leyenda:</p>
+                        <p *ngFor="let item of itemLegends"><span [ngStyle]="{'background-color': item.color}"></span> {{ item.name }}</p>
+                    </div>
+                </div>
+
+                <div class="side-right">
+                    <app-buttoner></app-buttoner>
+                </div>
+
+            </div>
+
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+</div>

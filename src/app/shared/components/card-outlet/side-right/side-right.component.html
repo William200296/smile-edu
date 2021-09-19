@@ -1,0 +1,108 @@
+<div class="container-side-right">
+
+    <div class="container-tabs">
+        <button class="button-tab selected" (click)="openTab('tab1', $event)">Información</button>
+        <button class="button-tab" (click)="openTab('tab2', $event)">Ficha Médica</button>
+        <button class="button-tab" (click)="openTab('tab3', $event)">Ficha Psicológica</button>
+        <button class="button-tab" (click)="openTab('tab4', $event)">Compromisos</button>
+    </div>
+
+    <div id="tab1" class="dynamic-tab">
+        <div class="accordion-container">
+            <app-accordion-item title="Personal">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores ratione quaerat impedit reprehenderit ullam consequatur nemo voluptate? Esse, quos optio. Quia non consectetur at omnis quam. In, aut excepturi.
+                </p>
+            </app-accordion-item>
+            <app-accordion-item title="Contacto">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores ratione quaerat impedit reprehenderit ullam consequatur nemo voluptate? Esse, quos optio. Quia non consectetur at omnis quam. In, aut excepturi.
+                </p>
+            </app-accordion-item>
+            <app-accordion-item title="Datos de privacidad">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores ratione quaerat impedit reprehenderit ullam consequatur nemo voluptate? Esse, quos optio. Quia non consectetur at omnis quam. In, aut excepturi.
+                </p>
+            </app-accordion-item>
+            <app-accordion-item title="Adicional">
+
+                <div class="d-flex">
+                    <mat-form-field appearance="fill" style="width: 300px  !important;">
+                        <mat-label>Selec. colegio de procedencia</mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let school of schooles" [value]="school.idSchool">
+                                {{ school.schoolName }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+    
+                    <button mat-mini-fab color="default" style="margin-left: 16px; margin-top: 8px;">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                </div>
+    
+                <mat-form-field appearance="fill">
+                    <mat-label>Selec. religión</mat-label>
+                    <mat-select>
+                        <mat-option *ngFor="let religion of religions" [value]="religion.idReligion">
+                            {{ religion.relgionName }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <p class="p-detail-options">¿Quiénes pueden recoger al estudiante?</p>
+
+                <div class="box-centered">
+                    <button mat-mini-fab color="default">
+                        <mat-icon>add</mat-icon>
+                    </button>
+
+                    <p class="p-detail-options">Agregar responsables (máx. 3)</p>
+                </div>
+
+                <p class="p-detail-options">¿Cómo se regresa a casa el estudiante?</p>
+
+                <mat-form-field appearance="fill" style="width: 400px !important;">
+                    <mat-label>Selec. medio de movilidad</mat-label>
+                    <mat-select>
+                        <mat-option value="1">
+                            TESLA
+                        </mat-option>
+                        <mat-option value="2">
+                            BMW
+                        </mat-option>
+                        <mat-option value="3">
+                            AUDI
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+            </app-accordion-item>
+        </div>
+    </div>
+
+    <div id="tab2" class="dynamic-tab" style="display:none">
+        <h2>Ficha Médica</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores ratione quaerat impedit reprehenderit
+            ullam consequatur nemo voluptate? Esse, quos optio. Quia non consectetur at omnis quam. In, aut excepturi.
+        </p>
+    </div>
+
+    <div id="tab3" class="dynamic-tab" style="display:none">
+        <h2>Ficha Psicológica</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores ratione quaerat impedit reprehenderit
+            ullam consequatur nemo voluptate? Esse, quos optio. Quia non consectetur at omnis quam. In, aut excepturi.
+        </p>
+    </div>
+
+    <div id="tab4" class="dynamic-tab" style="display:none">
+        <h2>Compromisos</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque dolores ratione quaerat impedit reprehenderit
+            ullam consequatur nemo voluptate? Esse, quos optio. Quia non consectetur at omnis quam. In, aut excepturi.
+        </p>
+    </div>
+
+</div>
